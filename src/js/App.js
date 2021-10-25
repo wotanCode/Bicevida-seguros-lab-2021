@@ -2,9 +2,24 @@
 import React, { useState, useEffect } from "react";
 //css
 import "../css/App.css";
+//URL API
+const URLapi = "https://dn8mlk7hdujby.cloudfront.net/interview/insurance/";
 
 function App() {
-  const URLapi = "https://dn8mlk7hdujby.cloudfront.net/interview/insurance/";
+  //Lista de seguros disponibles
+  const seguroLista = [
+    { value: 0, text: "Seleccionar", disabled: true },
+    { value: 58, text: "Seguro Vida Activa", disabled: false },
+    { value: 59, text: "Seguro Viaje Protegido", disabled: false },
+  ];
+
+  //State para el select del seguro, se modificcara cuando se cambie en el select
+  const [seguroIdSelected, setSeguroIdSelected] = useState(0);
+
+  //State para el button del seguro, se modifiara cuando se haga click en el button
+  const [buttonSeguroSelected, setButtonSeguroSelected] = useState(0);
+
+  //Estas guardan los posibles seguros:
   const [seguro1, setSeguro1] = useState();
   const [seguro2, setSeguro2] = useState();
 
@@ -40,27 +55,44 @@ function App() {
     fetchseguro(59);
   }, []);
 
+  const SeguroCard = (props) => {
+    return <div>{seguro1 ? <p>{seguro1.insurance.name}</p> : null}</div>;
+  };
+
+  const handleSelectSeguro = (e) => {
+    console.log(e.target.value);
+    setSeguroIdSelected(e.target.value);
+  };
+
+  const handleButtonSeguro = (e) => {
+    e.preventDefault();
+    setButtonSeguroSelected(seguroIdSelected);
+    console.log(buttonSeguroSelected);
+  };
   return (
     <div className="App">
-      <h1>Bicevida</h1>
+      <h1>bicevida new</h1>
       <form>
-        {seguro1 && seguro2 ? (
-          <select name="select">
-            <option value="58">{seguro1.insurance.name}</option>
-            <option value="59">{seguro2.insurance.name}</option>
-          </select>
-        ) : (
-          <select name="select"></select>
-        )}
+        <select
+          onChange={handleSelectSeguro}
+          name="seguro"
+          value={seguroIdSelected}
+        >
+          {seguroLista.map((seguro, index) => (
+            <option key={index} value={seguro.value} disabled={seguro.disabled}>
+              {seguro.text}
+            </option>
+          ))}
+        </select>
+        <button type="Submit" onClick={(e) => handleButtonSeguro(e)}>
+          Agregar
+        </button>
       </form>
-
-      <button>Agregar</button>
-      <button onClick={() => console.log(seguro1)}>mostrar arreglo</button>
+      {buttonSeguroSelected ? (
+        <SeguroCard buttonSeguroSelected={buttonSeguroSelected} />
+      ) : null}
     </div>
   );
 }
-/*
-https://dn8mlk7hdujby.cloudfront.net/interview/insurance/59
-*/
 
 export default App;
