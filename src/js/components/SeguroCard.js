@@ -33,13 +33,9 @@ export const SeguroCard = (props) => {
       {seguro ? (
         <div className="cardSeguro" >
           <img src={seguro.insurance.image} alt='imagen del seguro'/>
+          <h4 className="cardLabel">{seguro.insurance.price}</h4>
           <h2>{seguro.insurance.name}</h2>
-
-
           <p>{seguro.insurance.description}</p>
-
-
-          <p>{seguro.insurance.price}</p>
         </div>
       ) : null}
     </div>
