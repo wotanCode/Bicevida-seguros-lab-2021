@@ -1,9 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .cardSeguro {
   width: 328px;
-  height: 272px;
+  /* height: 272px; */
   background: #ffffff;
   border: 1px solid #dde3ed;
   border-radius: 8px;
@@ -11,6 +10,19 @@
 .cardSeguro img {
   width: 328px;
   height: 192px;
+}
+.cardLabel {
+  width: 52px;
+  height: 20px;
+  background: #1F61F7;
+  border-radius: 4px;
+  /* Label text: */
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: #F5F7FA;
 }
 .cardSeguro h2 {
   width: 216px;
@@ -23,8 +35,8 @@
   color: #060b25;
 }
 .cardSeguro p {
-  width: 51px;
-  height: 24px;
+  width: 100%;
+  /* height: 24px; */
   font-family: Poppins;
   font-weight: normal;
   font-size: 14px;

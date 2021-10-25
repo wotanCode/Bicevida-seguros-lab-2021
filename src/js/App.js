@@ -34,6 +34,7 @@ function App() {
     <main className="App">
       <h1>bicevida new</h1>
       <form>
+      <div>Seleccionar Plan</div>
         <select
           onChange={handleSelectSeguro}
           name="seguro"
