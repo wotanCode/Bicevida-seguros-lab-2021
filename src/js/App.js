@@ -5,6 +5,7 @@ import "../css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 //Componentes importados
 import { SeguroCard } from "./components/SeguroCard";
+import { Footer } from "./components/Footer";
 
 function App() {
   //Lista de seguros disponibles
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      
       <main className="container">
         <h2 className="my-3">Buscar Seguro</h2>
         <form className="my-3">
@@ -66,6 +68,7 @@ function App() {
           <SeguroCard buttonSeguroSelected={buttonSeguroSelected} />
         ) : null}
       </main>
+      <Footer/>
     </>
   );
 }
