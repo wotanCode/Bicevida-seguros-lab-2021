@@ -34,7 +34,6 @@ function App() {
 
   return (
     <>
-      
       <main className="container">
         <h2 className="my-3">Buscar Seguro</h2>
         <form className="my-3">
@@ -68,7 +67,8 @@ function App() {
           <SeguroCard buttonSeguroSelected={buttonSeguroSelected} />
         ) : null}
       </main>
-      <Footer/>
+      {/* Se llama aqui al componente footer */}
+      <Footer />
     </>
   );
 }
