@@ -1,35 +1,54 @@
 /* .App {
   text-align: center;
 } */
+
+/*Select no seleccionado*/
 .selectstyle {
+  /*Especificaciones tecnicas obligatorias. Select*/
   background: #ffffff;
   border: 1px solid #dde3ed;
   box-sizing: border-box;
   border-radius: 4px;
-  /*text*/
+  /*Especificaciones tecnicas obligatorias. text*/
   font-family: Poppins;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   color: #afbacc;
+  /*Redimencionando la etiqueta select*/
+  width: 320px;
+  height: 50px;
 }
+
+/* Select seleccionado */
 .selectstyle:focus {
+  /*Especificaciones tecnicas obligatorias. select focus*/
   background: #ffffff;
   border: 2px solid #1f61f7;
   box-sizing: border-box;
   border-radius: 4px;
-  /*text*/
+  /*Especificaciones tecnicas obligatorias. select text focus*/
+  color: #1f61f7;
+}
+.selectstyle:focus option {
+  color: black;
+}
+
+/*select label no seleccionado*/
+.selectLabel {
+  /*Especificaciones tecnicas obligatorias*/
   font-family: Poppins;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: #1f61f7;
-}
-.selectstyle:focus option{
-  color: black;
+  color: #afbacc;
+  /*Posicionando el label encima del select*/
+  position: absolute;
 }
 
+/*Button de busqueda del seguro*/
 .buttonSeguro {
+  /*Especificaciones tecnicas obligatorias button*/
   display: flex;
   flex-direction: row;
   padding: 8px 32px;
@@ -38,10 +57,14 @@
   background: #1f61f7;
   box-shadow: 0px 10px 16px rgba(18, 25, 84, 0.07);
   border-radius: 1000px;
-  /*texto*/
+  /*Especificaciones tecnicas obligatorias text button*/
   font-weight: bold;
   font-size: 16px;
   line-height: 32px;
   text-align: center;
   color: #ffffff;
+}
+/*texto dentro del button*/
+.textButton{
+  margin:auto;
 }
