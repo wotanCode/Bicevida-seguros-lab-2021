@@ -49,8 +49,6 @@
 /*Button de busqueda del seguro*/
 .buttonSeguro {
   /*Especificaciones tecnicas obligatorias button*/
-  display: flex;
-  flex-direction: row;
   padding: 8px 32px;
   width: 113px;
   height: 48px;
@@ -63,6 +61,7 @@
   line-height: 32px;
   text-align: center;
   color: #ffffff;
+  margin-left: 20px;
 }
 /*texto dentro del button*/
 .textButton{
