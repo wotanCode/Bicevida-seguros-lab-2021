@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 //css
 import "../../css/seguroCard.css";
+import "bootstrap/dist/css/bootstrap.min.css"
 //URL API
 import { URLAPI } from "../config/";
 
@@ -29,15 +30,19 @@ export const SeguroCard = (props) => {
     fetchseguro(props.buttonSeguroSelected);
   }, [props.buttonSeguroSelected]);
   return (
-    <div>
+    <>
       {seguro ? (
-        <div className="cardSeguro" >
-          <img src={seguro.insurance.image} alt='imagen del seguro'/>
-          <h4 className="cardLabel">{seguro.insurance.price}</h4>
-          <h2>{seguro.insurance.name}</h2>
-          <p>{seguro.insurance.description}</p>
+        <div className="cardSeguro">
+          <div className="Cardimagen">
+            <img src={seguro.insurance.image} alt='imagen del seguro'/>
+            <h4 className="cardLabel">{seguro.insurance.price}</h4>
+          </div>
+          <div className="cardTextos">
+            <h2>{seguro.insurance.name}</h2>
+            <p>{seguro.insurance.description}</p>
+          </div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 };

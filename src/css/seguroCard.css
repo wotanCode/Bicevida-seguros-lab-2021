@@ -1,31 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+/*card padre del seguro seleccionado*/
 .cardSeguro {
+  /*Especificaciones tecnicas obligatorias. Card*/
   width: 328px;
-  /* height: 272px; */
   background: #ffffff;
   border: 1px solid #dde3ed;
   border-radius: 8px;
 }
-.cardSeguro img {
+/*Div de la imagen y el precio*/
+.Cardimagen {
+  position: relative;
+}
+
+.Cardimagen img {
+  /*Especificaciones tecnicas obligatorias. imagen*/
   width: 328px;
   height: 192px;
+  position: relative;
 }
+/*Label de la card, aqui esta el precio*/
 .cardLabel {
+  /*Especificaciones tecnicas obligatorias. label*/
   width: 52px;
   height: 20px;
-  background: #1F61F7;
+  background: #1f61f7;
   border-radius: 4px;
-  /* Label text: */
+  /*Especificaciones tecnicas obligatorias. label text*/
   font-family: Poppins;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: #F5F7FA;
+  color: #f5f7fa;
+  /*Centrando*/
+  text-align: center;
+  padding-top: 2px;
+
+  /*Posicion del label dentro la img*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
 }
+/*Especificaciones tecnicas obligatorias. Titulo Card*/
 .cardSeguro h2 {
-  width: 216px;
+  width: 95%;
   height: 24px;
   font-family: Poppins;
   font-weight: bold;
@@ -33,14 +53,20 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #060b25;
+  /*MI codigo*/
+  margin: auto;
 }
+/*Especificaciones tecnicas obligatorias. Parrafo Card*/
 .cardSeguro p {
-  width: 100%;
-  /* height: 24px; */
+  width: 95%;
   font-family: Poppins;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #58606e;
+  margin: auto;
+}
+.cardTextos {
+  padding-bottom: 10px;
 }

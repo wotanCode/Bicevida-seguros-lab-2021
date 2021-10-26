@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 //css
 import "../css/App.css";
+import "bootstrap/dist/css/bootstrap.min.css"
 //Componentes importados
 import { SeguroCard } from "./components/SeguroCard";
 
@@ -31,10 +32,12 @@ function App() {
   };
 
   return (
-    <main className="App">
-      <h1>bicevida new</h1>
+    <>
+    <main className="container">
+      <h1>Buscar Seguro</h1>
+      <div >
       <form>
-      <div>Seleccionar Plan</div>
+        <label className="selectLabel">Seleccionar Plan</label>
         <select
           onChange={handleSelectSeguro}
           name="seguro"
@@ -52,13 +55,15 @@ function App() {
           type="Submit"
           onClick={(e) => handleButtonSeguro(e)}
         >
-          Ver
+          <label className="textButton">Ver</label>
         </button>
       </form>
+      </div>
       {buttonSeguroSelected ? (
         <SeguroCard buttonSeguroSelected={buttonSeguroSelected} />
       ) : null}
     </main>
+    </>
   );
 }
 
