@@ -1,6 +1,10 @@
-/* .App {
-  text-align: center;
-} */
+.footer{
+  height: 90px;
+}
+.logotipo {
+  width: 160px;
+  margin-top: 10px;
+}
 
 /*Select no seleccionado*/
 .selectstyle {
