@@ -1,6 +1,6 @@
 # BiceVida Seguros
 
-webApp que conecta con endpoints de BiceVida para obtener información de sus seguros
+webApp que conecta con endpoints de Bicevida para obtener información de sus seguros
 
 ### Librerías utilizadas
 - React versión 17.0.2
