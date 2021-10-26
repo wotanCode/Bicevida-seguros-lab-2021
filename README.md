@@ -1,4 +1,4 @@
-# BiceVida Seguros
+# Bicevida Seguros
 
 webApp que conecta con endpoints de Bicevida para obtener información de sus seguros
 
