@@ -32,16 +32,17 @@ export const SeguroCard = (props) => {
   return (
     <>
       {seguro ? (
-        <div className="cardSeguro">
+        <div className="cardSeguro mt-5">
           <div className="Cardimagen">
             <img src={seguro.insurance.image} alt='imagen del seguro'/>
-            <h4 className="cardLabel">{seguro.insurance.price}</h4>
+            <h4 className="cardLabel">{seguro.insurance.price}$</h4>
           </div>
           <div className="cardTextos">
             <h2>{seguro.insurance.name}</h2>
             <p>{seguro.insurance.description}</p>
           </div>
         </div>
+
       ) : null}
     </>
   );

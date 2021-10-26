@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 //css
 import "../css/App.css";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 //Componentes importados
 import { SeguroCard } from "./components/SeguroCard";
 
@@ -33,36 +33,39 @@ function App() {
 
   return (
     <>
-    <main className="container">
-      <h1>Buscar Seguro</h1>
-      <div >
-      <form>
-        <label className="selectLabel">Seleccionar Plan</label>
-        <select
-          onChange={handleSelectSeguro}
-          name="seguro"
-          value={seguroIdSelected}
-          className="selectstyle"
-        >
-          {seguroLista.map((seguro, index) => (
-            <option key={index} value={seguro.value} disabled={seguro.disabled}>
-              {seguro.text}
-            </option>
-          ))}
-        </select>
-        <button
-          className="buttonSeguro"
-          type="Submit"
-          onClick={(e) => handleButtonSeguro(e)}
-        >
-          <label className="textButton">Ver</label>
-        </button>
-      </form>
-      </div>
-      {buttonSeguroSelected ? (
-        <SeguroCard buttonSeguroSelected={buttonSeguroSelected} />
-      ) : null}
-    </main>
+      <main className="container">
+        <h2 className="my-3">Buscar Seguro</h2>
+        <form className="my-3">
+          <label className="selectLabel">Seleccionar Plan</label>
+          <select
+            onChange={handleSelectSeguro}
+            name="seguro"
+            value={seguroIdSelected}
+            className="selectstyle"
+          >
+            {seguroLista.map((seguro, index) => (
+              <option
+                key={index}
+                value={seguro.value}
+                disabled={seguro.disabled}
+              >
+                {seguro.text}
+              </option>
+            ))}
+          </select>
+          <button
+            className="buttonSeguro"
+            type="Submit"
+            onClick={(e) => handleButtonSeguro(e)}
+          >
+            <label className="textButton">Ver</label>
+          </button>
+        </form>
+
+        {buttonSeguroSelected ? (
+          <SeguroCard buttonSeguroSelected={buttonSeguroSelected} />
+        ) : null}
+      </main>
     </>
   );
 }
